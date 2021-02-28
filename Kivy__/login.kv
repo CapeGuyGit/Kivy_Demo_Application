@@ -1,0 +1,28 @@
+ScreenManagement:
+    LoginPage:
+    UserPage:
+<LoginPage>:
+    name: "login_page"
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Enter Your Name"
+        TextInput:
+            id: login
+        Label:
+            text: "Enter Your Password"
+        TextInput:
+            id: passw
+        Button:
+            text: "go"
+            on_release: app.root.current = "user"
+<UserPage>:
+    name: "user"
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Successfully Logged In!"
+        Button:
+            text: " Go back"
+            on_release:
+                app.root.current = "login_page"
